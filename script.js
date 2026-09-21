@@ -6,3 +6,5 @@ const updateHeader = () => {
 
 window.addEventListener("scroll", updateHeader, { passive: true });
 updateHeader();
+
+// # 두번째 수정
