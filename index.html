@@ -69,29 +69,44 @@
         <p>다양한 팀과 협업하며 제품의 시작과 다음 장면을 설계했습니다.</p>
       </div>
       <div class="project-grid">
-        <article class="project-card project-olive">
+        <button class="project-card project-olive" type="button" data-project="morrow" aria-label="Morrow 프로젝트 상세 정보 보기">
           <div class="project-topline"><span>01</span><span>Brand / Web</span></div>
           <div class="project-art art-olive">
             <div class="olive-window"><span>morrow</span><small>Live more<br>tomorrow.</small><b>↗</b></div>
           </div>
-          <div class="project-info"><h3>Morrow</h3><p>더 나은 내일을 위한 웰니스 브랜드 경험</p><a href="#contact" aria-label="Morrow 프로젝트 문의">View case study <span>↗</span></a></div>
-        </article>
-        <article class="project-card project-blue">
+          <div class="project-info"><h3>Morrow</h3><p>더 나은 내일을 위한 웰니스 브랜드 경험</p><span class="project-action">View case study <span>↗</span></span></div>
+        </button>
+        <button class="project-card project-blue" type="button" data-project="focusly" aria-label="Focusly 프로젝트 상세 정보 보기">
           <div class="project-topline"><span>02</span><span>Product / App</span></div>
           <div class="project-art art-blue">
             <div class="phone"><span class="phone-notch"></span><small>Good morning, Hyewon</small><strong>오늘의<br><em>집중 시간</em></strong><div class="progress-ring">72%</div></div>
           </div>
-          <div class="project-info"><h3>Focusly</h3><p>집중의 리듬을 찾아주는 생산성 앱</p><a href="#contact" aria-label="Focusly 프로젝트 문의">View case study <span>↗</span></a></div>
-        </article>
-        <article class="project-card project-yellow">
+          <div class="project-info"><h3>Focusly</h3><p>집중의 리듬을 찾아주는 생산성 앱</p><span class="project-action">View case study <span>↗</span></span></div>
+        </button>
+        <button class="project-card project-yellow" type="button" data-project="off-grid" aria-label="Off the Grid 프로젝트 상세 정보 보기">
           <div class="project-topline"><span>03</span><span>Identity / Digital</span></div>
           <div class="project-art art-yellow">
             <div class="yellow-poster"><span>OFF<br>THE<br>GRID</span><b>↗</b><small>SEOUL 2024</small></div>
           </div>
-          <div class="project-info"><h3>Off the Grid</h3><p>도시의 새로운 문화를 기록하는 미디어</p><a href="#contact" aria-label="Off the Grid 프로젝트 문의">View case study <span>↗</span></a></div>
-        </article>
+          <div class="project-info"><h3>Off the Grid</h3><p>도시의 새로운 문화를 기록하는 미디어</p><span class="project-action">View case study <span>↗</span></span></div>
+        </button>
       </div>
     </section>
+
+    <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+      <div class="dialog-heading">
+        <p class="section-label">PROJECT DETAILS · EXAMPLE</p>
+        <button class="dialog-close" type="button" aria-label="상세 정보 닫기">×</button>
+      </div>
+      <p class="example-notice">아래 프로젝트 상세 정보는 이해를 돕기 위한 예시이며 실제 정보가 아닙니다.</p>
+      <h2 id="dialog-title"></h2>
+      <p class="dialog-description" id="dialog-description"></p>
+      <dl class="dialog-details">
+        <div><dt>담당 역할</dt><dd id="dialog-role"></dd></div>
+        <div><dt>사용 기술</dt><dd id="dialog-technology"></dd></div>
+        <div><dt>주요 성과</dt><dd id="dialog-result"></dd></div>
+      </dl>
+    </dialog>
 
     <section id="contact" class="contact section-wrap section-line" aria-labelledby="contact-title">
       <div class="section-label">03 / CONTACT</div>

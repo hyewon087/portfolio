@@ -64,7 +64,8 @@ h2 span { color: inherit; }
 .work-heading { display: grid; grid-template-columns: 1fr 1.5fr 1fr; align-items: end; gap: 45px; margin-bottom: 53px; }
 .work-heading > p { margin: 0 0 3px; justify-self: end; }
 .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.project-card { min-width: 0; }
+.project-card { display: block; width: 100%; min-width: 0; padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.project-card:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; }
 .project-topline { display: flex; justify-content: space-between; color: var(--muted); font: 12px "DM Mono"; margin-bottom: 12px; }
 .project-art { height: 330px; overflow: hidden; position: relative; display: grid; place-items: center; }
 .art-olive { background: var(--olive); }
@@ -85,8 +86,23 @@ h2 span { color: inherit; }
 .project-info { padding: 19px 1px 0; }
 .project-info h3 { margin-bottom: 4px; font: 700 25px var(--display); letter-spacing: -.05em; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .project-info p { min-height: 38px; margin-bottom: 16px; color: var(--muted); font-size: 14px; letter-spacing: -.04em; }
-.project-info a { font: 600 15px var(--display); border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
-.project-info a span { margin-left: 9px; font-size: 14px; }
+.project-action { display: inline-block; font: 600 15px var(--display); border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
+.project-action span { margin-left: 9px; font-size: 14px; }
+.project-card:hover .project-action { color: var(--muted); }
+.project-dialog { width: min(600px, calc(100% - 32px)); max-height: min(84vh, 720px); padding: clamp(24px, 5vw, 42px); overflow-y: auto; border: 1px solid var(--line); background: var(--paper); color: var(--ink); box-shadow: 0 24px 80px rgb(23 34 31 / 20%); }
+.project-dialog::backdrop { background: rgb(23 34 31 / 58%); }
+.dialog-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.dialog-heading .section-label { margin: 0; }
+.dialog-close { display: grid; flex: 0 0 40px; place-items: center; width: 40px; height: 40px; padding: 0; border: 1px solid var(--line); background: transparent; color: var(--ink); font: 400 27px/1 var(--body); cursor: pointer; }
+.dialog-close:hover { background: var(--ink); color: var(--paper); }
+.dialog-close:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.example-notice { margin: 21px 0 28px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.project-dialog h2 { margin-bottom: 15px; background: none; color: var(--ink); font-size: 38px; letter-spacing: 0; }
+.dialog-description { margin-bottom: 28px; color: var(--muted); font-size: 15px; line-height: 1.8; }
+.dialog-details { margin: 0; border-top: 1px solid var(--line); }
+.dialog-details div { display: grid; grid-template-columns: 105px 1fr; gap: 16px; padding: 17px 0; border-bottom: 1px solid var(--line); }
+.dialog-details dt { color: var(--muted); font-size: 13px; font-weight: 600; }
+.dialog-details dd { margin: 0; font-size: 14px; line-height: 1.7; overflow-wrap: anywhere; }
 .contact { padding: 51px 0 115px; }
 .contact-content { display: flex; align-items: end; justify-content: space-between; padding: 63px 0 0 25%; }
 .contact-content h2 { margin-bottom: 27px; }
@@ -124,4 +140,7 @@ h2 span { color: inherit; }
   .desktop-break { display: none; }
   .about-meta { gap: 20px; }
   .email-link { font-size: 16px; }
+  .project-dialog { padding: 22px 20px; }
+  .project-dialog h2 { font-size: 32px; }
+  .dialog-details div { grid-template-columns: 1fr; gap: 5px; }
 }
